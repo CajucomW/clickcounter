@@ -23,7 +23,8 @@ class App extends Component {
       return (
         <div className="App">
           <h1>Click Counter</h1>
-          <p onClick={this.clickCounter}>Click here:  
+          <p onClick={this.clickCounter}>Click here:</p>
+          <p>
             {/* {} enters JS commands */}
             {this.state.clicked}
             </p>
