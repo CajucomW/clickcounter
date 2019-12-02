@@ -14,19 +14,26 @@ class App extends Component {
     clickCounter = () => {
         console.log('getting clicked');
         let numberOfClicks = this.state.clicked;
+        // putting clicked in a variable
+        
         console.log('number of clicks', numberOfClicks);
         this.setState({
             clicked: numberOfClicks + 1,
         });
+        // set the state to reflect the change in number
     }
     
     tapCounter = () => {
         console.log('getting tapped');
         let numberOfTaps = this.state.tapped;
+        // putting tapped in a variable
+        
         console.log('number of taps', numberOfTaps);
         this.setState({
             tapped: numberOfTaps + 1,
         });
+        // setting the state to reflect changes in 'tapped'
+        
     }
 
 
@@ -42,18 +49,22 @@ class App extends Component {
           
           <Button
             text="Clicked"
-            selected={this.clicked} />
-            
+            selected={this.clickCounter} />
+          
+          <br />
+          
           <Button
             text="Tapped"
-            selected={this.tapped} />    
+            selected={this.tapCounter} />    
             
           <p>
             {this.state.clicked}
+            {/* this line of code shows the number of times clicked */}
           </p>
           
           <p>
             {this.state.tapped}
+            {/* this line of code shows the number of times tapped */}
           </p>
         </div>
       );

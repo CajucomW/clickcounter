@@ -14,19 +14,26 @@ class App extends Component {
     clickCounter = () => {
         console.log('getting clicked');
         let numberOfClicks = this.state.clicked;
+        // putting clicked in a variable
+        
         console.log('number of clicks', numberOfClicks);
         this.setState({
             clicked: numberOfClicks + 1,
         });
+        // set the state to reflect the change in number
     }
     
     tapCounter = () => {
         console.log('getting tapped');
         let numberOfTaps = this.state.tapped;
+        // putting tapped in a variable
+        
         console.log('number of taps', numberOfTaps);
         this.setState({
             tapped: numberOfTaps + 1,
         });
+        // setting the state to reflect changes in 'tapped'
+        
     }
 
 
@@ -41,19 +48,33 @@ class App extends Component {
           <h1>Click Counter</h1>
           
           <Button
-            text="Clicked"
+            text="Click"
             selected={this.clickCounter} />
-            
+          {/* the 'text' and 'selected' properties above */}
+          {/* are sent to the Button child component to use */}
+          {/* clickCounter Method is used on in the 'selected' prop*/}
+          {/* to pass down to the child component */}
+          {/* which activates the onClick event */}
+          
+          <br />
+          
           <Button
-            text="Tapped"
-            selected={this.tapCounter} />    
+            text="Tap"
+            selected={this.tapCounter} />
+          {/* the 'text' and 'selected' properties above */}
+          {/* are sent to the Button child component to use */}
+          {/* tapCounter Method is used on in the 'selected' prop*/}
+          {/* to pass down to the child component */}
+          {/* which activates the onClick event */}
             
           <p>
             {this.state.clicked}
+            {/* this line of code shows the number of times clicked */}
           </p>
           
           <p>
             {this.state.tapped}
+            {/* this line of code shows the number of times tapped */}
           </p>
         </div>
       );
