@@ -4,7 +4,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In this project I recreated something I learned in class regarding basic application of the "State" object to render components. 
 
+Edited 12/01/2019:
+
+Included Componentization to allow two buttons that count up separately with coded comments regarding on pattern flow.
+
 ### `"Click Here"`
 
 As the instruction suggests, click the text and watch the number go up, up, and up!
-On the "Click Here" text, there's an `onClick` event attached to a function. Within the function, the state is reset to add +1 to the defined object that was originally set to 0 (zero). Every `onClick` event adds +1 the state, which increases the counter by, well, 1!
+The "Click" and "Tap" texts live in `App.js`, while the `onClick` event is now located in a separate child component `Button.js`. Properties have been passed to the `Button.js` component from the parent component, `App.js`. Within the function, the state is reset to add +1 to the defined object that was originally set to 0 (zero). Every `onClick` event adds +1 the state, which increases the counter by, well, 1!
+
+This project was based on classwork from
+https://www.kickstartcoding.com
